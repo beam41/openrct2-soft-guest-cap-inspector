@@ -1,4 +1,5 @@
 /// <reference path="../lib/openrct2.d.ts" />
+import 'core-js/actual/map'
 import { main } from './main'
 
 registerPlugin({

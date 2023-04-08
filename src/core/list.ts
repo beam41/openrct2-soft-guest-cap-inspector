@@ -7,7 +7,7 @@ import {
   RIDE_LIFECYCLE_TESTED,
 } from './reference'
 
-export function getValidBonusRide(): Ride[] {
+export function getValidBonusRides(): Ride[] {
   return map.rides.filter(
     (ride) =>
       ride.status === 'open' &&
@@ -16,8 +16,12 @@ export function getValidBonusRide(): Ride[] {
   )
 }
 
-export function getValidDifficultGuestGenerationBonusRide(validBonusRide: Ride[]): Ride[] {
-  return validBonusRide.filter(
+export function getOpenRides(): Ride[] {
+  return map.rides.filter((ride) => ride.status === 'open')
+}
+
+export function getValidDifficultGuestGenerationBonusRides(validBonusRides: Ride[]): Ride[] {
+  return validBonusRides.filter(
     (ride) =>
       ride.lifecycleFlags & RIDE_LIFECYCLE_TESTED &&
       rideFlagsLow[ride.type] & RIDE_TYPE_FLAG_HAS_TRACK &&
@@ -25,4 +29,37 @@ export function getValidDifficultGuestGenerationBonusRide(validBonusRide: Ride[]
       //ride.stations[0].segmentLength >= 600
       ride.excitement >= 600
   )
+}
+
+export function groupRideByName(rides: Ride[]): Map<string, Ride[]> {
+  const groupMap = new Map<string, Ride[]>()
+  for (const ride of rides) {
+    const rideArr = groupMap.get(ride.object.name)
+    if (rideArr) {
+      rideArr.push(ride)
+    } else {
+      groupMap.set(ride.object.name, [ride])
+    }
+  }
+  return groupMap
+}
+
+export function countBrokenDownRide(rides: Ride[]): number {
+  let count = 0
+  for (const ride of rides) {
+    if (ride.lifecycleFlags & RIDE_LIFECYCLE_BROKEN_DOWN) {
+      ++count
+    }
+  }
+  return count
+}
+
+export function countCrashedRide(rides: Ride[]): number {
+  let count = 0
+  for (const ride of rides) {
+    if (ride.lifecycleFlags & RIDE_LIFECYCLE_CRASHED) {
+      ++count
+    }
+  }
+  return count
 }

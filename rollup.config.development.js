@@ -25,6 +25,9 @@ export default defineConfig({
     // Compile plugin...
     typescript(),
     terser({
+      compress: {
+        negate_iife: false,
+      },
       format: {
         quote_style: 1,
         wrap_iife: true,

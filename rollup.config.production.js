@@ -20,6 +20,7 @@ export default defineConfig({
     terser({
       compress: {
         passes: 5,
+        negate_iife: false,
       },
       format: {
         quote_style: 1,
