@@ -1,5 +1,5 @@
 /// <reference path="../lib/openrct2.d.ts" />
-import { main } from '@/src/main'
+import { main } from './main'
 
 registerPlugin({
   name: 'Soft Guest Cap Inspector',

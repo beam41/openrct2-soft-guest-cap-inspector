@@ -25,7 +25,6 @@ export default defineConfig({
         quote_style: 1,
         wrap_iife: true,
       },
-      keep_fnames: true,
     }),
   ],
 })

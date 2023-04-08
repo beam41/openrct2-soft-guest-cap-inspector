@@ -27,5 +27,8 @@
     "rollup": "^2.79.1",
     "rollup-plugin-delete": "^2.0.0",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "openrct2-flexui": "^0.1.0-prerelease.11"
   }
 }
