@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es5",
+    "isolatedModules": true,
+    "sourceMap": false,
+    "rootDir": "./src",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "strict": true
+  },
+  "include": [
+    "**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
+}
