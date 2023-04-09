@@ -8,7 +8,7 @@ total value. So, I combine with
 Note: Park with Harder Guest Generation doesn't work properly, because some field that use in calculation doesn't get
 exposed to plugins.
 
-![img](https://raw.githubusercontent.com/beam41/openrct2-soft-guest-cap-inspector/main/resources/Screenshot.png)
+![img](https://raw.githubusercontent.com/beam41/openrct2-soft-guest-cap-inspector/main/resources/Screenshot1.png)
 
 Table can be sort by clicking column header.
 
