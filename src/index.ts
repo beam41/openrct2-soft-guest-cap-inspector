@@ -1,5 +1,4 @@
 /// <reference path="../lib/openrct2.d.ts" />
-import 'core-js/actual/object/entries.js'
 import { main } from './main'
 
 registerPlugin({
