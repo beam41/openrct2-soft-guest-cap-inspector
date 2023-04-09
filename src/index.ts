@@ -3,7 +3,7 @@ import { main } from './main'
 
 registerPlugin({
   name: 'Soft Guest Cap Inspector',
-  version: '1.0',
+  version: '0.1',
   authors: ['beam41'],
   type: 'local',
   licence: 'MIT',
