@@ -22,7 +22,6 @@ export default defineConfig({
   plugins: [
     nodeResolve(),
     commonjs(),
-    // Compile plugin...
     typescript(),
     terser({
       compress: {
@@ -35,4 +34,5 @@ export default defineConfig({
       keep_fnames: true,
     }),
   ],
+  treeshake: 'smallest',
 })

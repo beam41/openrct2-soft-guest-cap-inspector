@@ -16,11 +16,19 @@ export function getValidBonusRides(): Ride[] {
   )
 }
 
+export function getValidBonusRidesFromOpenRide(openRides: Ride[]): Ride[] {
+  return openRides.filter(
+    (ride) =>
+      !(ride.lifecycleFlags & RIDE_LIFECYCLE_BROKEN_DOWN) &&
+      !(ride.lifecycleFlags & RIDE_LIFECYCLE_CRASHED)
+  )
+}
+
 export function getOpenRides(): Ride[] {
   return map.rides.filter((ride) => ride.status === 'open')
 }
 
-export function getValidDifficultGuestGenerationBonusRides(validBonusRides: Ride[]): Ride[] {
+export function getValidDifficultGenerationBonusRides(validBonusRides: Ride[]): Ride[] {
   return validBonusRides.filter(
     (ride) =>
       ride.lifecycleFlags & RIDE_LIFECYCLE_TESTED &&
@@ -31,14 +39,14 @@ export function getValidDifficultGuestGenerationBonusRides(validBonusRides: Ride
   )
 }
 
-export function groupRideByName(rides: Ride[]): Map<string, Ride[]> {
-  const groupMap = new Map<string, Ride[]>()
+export function groupRideByType(rides: Ride[]): Record<string, Ride[]> {
+  const groupMap: Record<string, Ride[]> = {}
   for (const ride of rides) {
-    const rideArr = groupMap.get(ride.object.name)
+    const rideArr = groupMap[ride.object.name]
     if (rideArr) {
       rideArr.push(ride)
     } else {
-      groupMap.set(ride.object.name, [ride])
+      groupMap[ride.object.name] = [ride]
     }
   }
   return groupMap

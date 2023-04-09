@@ -9,11 +9,13 @@
     "isolatedModules": true,
     "sourceMap": false,
     "rootDir": "./src",
+    "baseUrl": "./",
     "paths": {
       "@/*": [
         "./*"
       ]
     },
+    "removeComments": true,
     "strict": true,
     "downlevelIteration": true
   },
