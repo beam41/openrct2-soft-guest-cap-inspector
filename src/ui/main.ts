@@ -71,32 +71,32 @@ export function mainUI(): WindowTemplate {
         isStriped: true,
         columns: [
           {
-            header: 'type',
+            header: 'Type',
             width: '100%',
             canSort: true,
           },
           {
-            header: 'bonus',
+            header: 'Bonus',
             width: 50,
             canSort: true,
           },
           {
-            header: 'count',
+            header: 'Amount',
             width: 50,
             canSort: true,
           },
           {
-            header: 'broken',
+            header: 'Broken',
             width: 50,
             canSort: true,
           },
           {
-            header: 'crashed',
+            header: 'Crashed',
             width: 50,
             canSort: true,
           },
           {
-            header: 'sum bonus',
+            header: 'Sum Bonus',
             width: 75,
             canSort: true,
           },
