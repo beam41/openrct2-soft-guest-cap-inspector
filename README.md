@@ -11,7 +11,7 @@ exposed to plugins.
 ## Installation
 
 1. Download the latest version of the plugin from
-   the [Releases page]().
+   the [Releases page](https://github.com/beam41/openrct2-soft-guest-cap-inspector/releases/tag/v0.1).
 2. To install it, put the downloaded `*.js` file into your `/OpenRCT2/plugin` folder.
 
 - Easiest way to find the OpenRCT2-folder is by launching the OpenRCT2 game, click and hold on the red toolbox in the
@@ -24,6 +24,6 @@ exposed to plugins.
 ## Thanks
 
 - [wisnia74's Typescript Modding Template](https://github.com/wisnia74/openrct2-typescript-mod-template) - My bundler of
-  choice can't bundle to es5, So I learn how to set up rollup from this template.
+  choice can't bundle to es5,So I learn how to set up rollup from this template.
 
 - [Basssiiie's FlexUI](https://github.com/Basssiiie/OpenRCT2-FlexUI) for easy to use UI library.
