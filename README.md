@@ -1,4 +1,4 @@
-# OpenRCT2 Soft Guest Cap inspector
+# OpenRCT2 Soft Guest Cap Inspector
 
 I made this plugin because I want to know bonus value from each ride but
 [Sadret's Soft Guest cap Calculator](https://github.com/Sadret/openrct2-soft-guest-cap-calculator) only provide
