@@ -4,6 +4,7 @@ import typescript from '@rollup/plugin-typescript'
 import terser from '@rollup/plugin-terser'
 import del from 'rollup-plugin-delete'
 import { defineConfig } from 'rollup'
+import eslint from '@rollup/plugin-eslint'
 
 export default defineConfig({
   external: ['@/lib/openrct2'],
@@ -13,9 +14,9 @@ export default defineConfig({
     format: 'iife',
   },
   plugins: [
-    del({ targets: './build/*' }),
     nodeResolve(),
     commonjs(),
+    eslint(),
     typescript(),
     terser({
       compress: {
@@ -27,6 +28,7 @@ export default defineConfig({
         wrap_iife: true,
       },
     }),
+    del({ targets: './build/*' }),
   ],
   treeshake: 'smallest',
 })
