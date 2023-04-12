@@ -28,6 +28,6 @@ Table can be sort by clicking column header.
 ## Thanks
 
 - [wisnia74's Typescript Modding Template](https://github.com/wisnia74/openrct2-typescript-mod-template) - My bundler of
-  choice can't bundle to es5,So I learn how to set up rollup from this template.
+  choice can't bundle to es5, So I learn how to set up rollup from this template.
 
 - [Basssiiie's FlexUI](https://github.com/Basssiiie/OpenRCT2-FlexUI) for easy to use UI library.
